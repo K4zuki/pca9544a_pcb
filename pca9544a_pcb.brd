@@ -666,7 +666,7 @@ design rules under a new name.</description>
 <attribute name="NOT_COMPONENT" value="YES" x="8.85" y="42.96" size="1.778" layer="27" display="off"/>
 </element>
 <element name="B1" library="mylib" package="BOARD-AKI-45" value="UNIVERSALBOARD-45" x="0" y="0"/>
-<element name="U$1" library="mylib" package="QFN20-0.65P5.0X5.0" value="PCA9544ABS" x="-3.5" y="-4.5"/>
+<element name="IC1" library="mylib" package="QFN20-0.65P5.0X5.0" value="PCA9544ABS" x="22.5" y="22.5"/>
 </elements>
 <signals>
 </signals>

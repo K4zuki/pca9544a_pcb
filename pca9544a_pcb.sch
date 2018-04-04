@@ -15517,7 +15517,7 @@ DIN A4, landscape with location and doc. field</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="PCA9544A">
+<deviceset name="PCA9544A" prefix="IC">
 <gates>
 <gate name="G$1" symbol="PCA9544A" x="-17.78" y="-25.4"/>
 </gates>
@@ -15566,7 +15566,7 @@ DIN A4, landscape with location and doc. field</description>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="GIT1" library="git-revision" deviceset="GIT-REVISION" device="_1.7"/>
 <part name="B1" library="mylib" deviceset="UNIVERSALBOARD" device="-45"/>
-<part name="U$1" library="mylib" deviceset="PCA9544A" device="BS"/>
+<part name="IC1" library="mylib" deviceset="PCA9544A" device="BS"/>
 </parts>
 <sheets>
 <sheet>
@@ -15576,7 +15576,7 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="GIT1" gate="G$1" x="215.9" y="20.32"/>
 <instance part="B1" gate="G$1" x="165.1" y="7.62"/>
-<instance part="U$1" gate="G$1" x="93.98" y="86.36"/>
+<instance part="IC1" gate="G$1" x="109.22" y="81.28"/>
 </instances>
 <busses>
 </busses>
