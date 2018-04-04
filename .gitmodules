@@ -1,0 +1,3 @@
+[submodule "myPCBlib"]
+	path = myPCBlib
+	url = git@github.com:K4zuki/myPCBlib.git
