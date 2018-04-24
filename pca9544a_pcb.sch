@@ -523,6 +523,38 @@ chip</description>
 <wire x1="4" y1="0" x2="4" y2="6.1" width="0" layer="20"/>
 <circle x="0" y="0" radius="1.6" width="0.2" layer="51"/>
 </package>
+<package name="S4B-XH-A(LF)(SN)">
+<pad name="1" x="-3.75" y="0" drill="0.9" diameter="1.5" shape="square"/>
+<pad name="2" x="-1.25" y="0" drill="0.9" diameter="1.5"/>
+<pad name="3" x="1.25" y="0" drill="0.9" diameter="1.5"/>
+<pad name="4" x="3.75" y="0" drill="0.9" diameter="1.5"/>
+<wire x1="6.2" y1="2.3" x2="5.4" y2="2.3" width="0.2" layer="21"/>
+<wire x1="-5.4" y1="2.3" x2="-6.2" y2="2.3" width="0.2" layer="21"/>
+<wire x1="6.2" y1="2.3" x2="6.2" y2="-9.2" width="0.2" layer="21"/>
+<wire x1="6.2" y1="-9.2" x2="-6.2" y2="-9.2" width="0.2" layer="21"/>
+<wire x1="-6.2" y1="-9.2" x2="-6.2" y2="2.3" width="0.2" layer="21"/>
+<wire x1="4.2" y1="-9.2" x2="3.2" y2="-9.2" width="0.2" layer="51"/>
+<wire x1="-3.2" y1="-9.2" x2="-4.2" y2="-9.2" width="0.2" layer="51"/>
+<text x="0" y="0" size="1.778" layer="25" ratio="17" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.778" layer="27" ratio="17" align="center">&gt;VALUE</text>
+<polygon width="0.2" layer="51">
+<vertex x="4.2" y="-9.2"/>
+<vertex x="4.2" y="-6.6"/>
+<vertex x="3.8" y="-6.2"/>
+<vertex x="3.2" y="-6.2"/>
+<vertex x="3.2" y="-9.2"/>
+</polygon>
+<polygon width="0.2" layer="51">
+<vertex x="-3.2" y="-9.2"/>
+<vertex x="-3.2" y="-6.2"/>
+<vertex x="-3.8" y="-6.2"/>
+<vertex x="-4.2" y="-6.6"/>
+<vertex x="-4.2" y="-9.2"/>
+</polygon>
+<wire x1="5.4" y1="-2.2" x2="-5.4" y2="-2.2" width="0.2" layer="21"/>
+<wire x1="5.4" y1="2.3" x2="5.4" y2="-2.2" width="0.2" layer="21"/>
+<wire x1="-5.4" y1="2.3" x2="-5.4" y2="-2.2" width="0.2" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PCA9544A">
@@ -607,6 +639,17 @@ chip</description>
 <wire x1="5.08" y1="-2.54" x2="2.54" y2="-5.08" width="0.254" layer="94" curve="-90"/>
 <wire x1="5.08" y1="0" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="MPINV">
+<text x="-1.27" y="1.27" size="1.778" layer="96">&gt;VALUE</text>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<rectangle x1="0" y1="-0.254" x2="1.778" y2="0.254" layer="94"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+<symbol name="MPIN">
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<rectangle x1="0" y1="-0.254" x2="1.778" y2="0.254" layer="94"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1016,95 +1059,15 @@ chip</description>
 </device>
 </devices>
 </deviceset>
-</devicesets>
-</library>
-<library name="con-samtec.local">
-<description>&lt;b&gt;Samtec Connectors&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="TSW-104-02-S-S">
-<description>&lt;b&gt;THROUGH-HOLE .025inch SQ POST HEADER&lt;/b&gt;&lt;p&gt;
-Source: Samtec TSW.pdf</description>
-<wire x1="-5.209" y1="1.155" x2="5.209" y2="1.155" width="0.2" layer="21"/>
-<wire x1="5.209" y1="1.155" x2="5.209" y2="-1.155" width="0.2" layer="21"/>
-<wire x1="5.209" y1="-1.155" x2="-5.209" y2="-1.155" width="0.2" layer="21"/>
-<wire x1="-5.209" y1="-1.155" x2="-5.209" y2="1.155" width="0.2" layer="21"/>
-<pad name="1" x="3.81" y="0" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
-<pad name="2" x="1.27" y="0" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
-<pad name="3" x="-1.27" y="0" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
-<pad name="4" x="-3.81" y="0" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
-<text x="-5.7" y="-1.2" size="1.27" layer="25" ratio="16" rot="R90">&gt;NAME</text>
-<text x="6.9" y="-1.2" size="1.27" layer="27" ratio="16" rot="R90">&gt;VALUE</text>
-<rectangle x1="-4.16" y1="-0.35" x2="-3.46" y2="0.35" layer="51"/>
-<rectangle x1="-1.62" y1="-0.35" x2="-0.92" y2="0.35" layer="51"/>
-<rectangle x1="0.92" y1="-0.35" x2="1.62" y2="0.35" layer="51"/>
-<rectangle x1="3.46" y1="-0.35" x2="4.16" y2="0.35" layer="51"/>
-<polygon width="0.2" layer="21">
-<vertex x="4.2" y="1.1"/>
-<vertex x="5.1" y="0.2"/>
-<vertex x="5.1" y="1.1"/>
-</polygon>
-</package>
-<package name="TSW-104-02-S-S-RA">
-<description>&lt;b&gt;THROUGH-HOLE .025inch SQ POST HEADER&lt;/b&gt;&lt;p&gt;
-Source: Samtec TSW.pdf</description>
-<wire x1="-5.209" y1="-2.046" x2="5.209" y2="-2.046" width="0.2032" layer="21"/>
-<wire x1="5.209" y1="-2.046" x2="5.209" y2="-0.106" width="0.2032" layer="21"/>
-<wire x1="5.209" y1="-0.106" x2="-5.209" y2="-0.106" width="0.2032" layer="21"/>
-<wire x1="-5.209" y1="-0.106" x2="-5.209" y2="-2.046" width="0.2032" layer="21"/>
-<pad name="1" x="3.81" y="1.524" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
-<pad name="2" x="1.27" y="1.524" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
-<pad name="3" x="-1.27" y="1.524" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
-<pad name="4" x="-3.81" y="1.524" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
-<text x="-5.715" y="-7.62" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="6.985" y="-7.62" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<text x="5.092" y="1.152" size="1.1" layer="21" font="vector" rot="SR0">1</text>
-<rectangle x1="-4.064" y1="0" x2="-3.556" y2="1.778" layer="51"/>
-<rectangle x1="-1.524" y1="0" x2="-1.016" y2="1.778" layer="51"/>
-<rectangle x1="1.016" y1="0" x2="1.524" y2="1.778" layer="51"/>
-<rectangle x1="3.556" y1="0" x2="4.064" y2="1.778" layer="51"/>
-<rectangle x1="-4.064" y1="-7.89" x2="-3.556" y2="-2.04" layer="21"/>
-<rectangle x1="-1.524" y1="-7.89" x2="-1.016" y2="-2.04" layer="21"/>
-<rectangle x1="1.016" y1="-7.89" x2="1.524" y2="-2.04" layer="21"/>
-<rectangle x1="3.556" y1="-7.89" x2="4.064" y2="-2.04" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="MPINV">
-<text x="-1.27" y="1.27" size="1.778" layer="96">&gt;VALUE</text>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<rectangle x1="0" y1="-0.254" x2="1.778" y2="0.254" layer="94"/>
-<pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-<symbol name="MPIN">
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<rectangle x1="0" y1="-0.254" x2="1.778" y2="0.254" layer="94"/>
-<pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="TSW-104-02-S-S" prefix="X">
-<description>&lt;b&gt;THROUGH-HOLE .025inch SQ POST HEADER&lt;/b&gt;&lt;p&gt;
-Source: Samtec TSW.pdf</description>
+<deviceset name="S4B-XH-A" prefix="CON" uservalue="yes">
 <gates>
-<gate name="-1" symbol="MPINV" x="0" y="2.54" addlevel="always"/>
-<gate name="-2" symbol="MPIN" x="0" y="0" addlevel="always"/>
-<gate name="-3" symbol="MPIN" x="0" y="-2.54" addlevel="always"/>
-<gate name="-4" symbol="MPIN" x="0" y="-5.08" addlevel="always"/>
+<gate name="-1" symbol="MPINV" x="0" y="0" addlevel="always"/>
+<gate name="-2" symbol="MPIN" x="0" y="-2.54" addlevel="always"/>
+<gate name="-3" symbol="MPIN" x="0" y="-5.08" addlevel="always"/>
+<gate name="-4" symbol="MPIN" x="0" y="-7.62" addlevel="always"/>
 </gates>
 <devices>
-<device name="" package="TSW-104-02-S-S">
-<connects>
-<connect gate="-1" pin="1" pad="1"/>
-<connect gate="-2" pin="1" pad="2"/>
-<connect gate="-3" pin="1" pad="3"/>
-<connect gate="-4" pin="1" pad="4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="-RA" package="TSW-104-02-S-S-RA">
+<device name="" package="S4B-XH-A(LF)(SN)">
 <connects>
 <connect gate="-1" pin="1" pad="1"/>
 <connect gate="-2" pin="1" pad="2"/>
@@ -1141,11 +1104,11 @@ Source: Samtec TSW.pdf</description>
 <part name="C1" library="mylib" deviceset="C-SMD-*" device="-1608" technology="0.1U"/>
 <part name="SUPPLY1" library="mylib" deviceset="GND" device=""/>
 <part name="P+1" library="mylib" deviceset="VCC" device=""/>
-<part name="X1" library="con-samtec.local" deviceset="TSW-104-02-S-S" device=""/>
-<part name="X2" library="con-samtec.local" deviceset="TSW-104-02-S-S" device=""/>
-<part name="X3" library="con-samtec.local" deviceset="TSW-104-02-S-S" device=""/>
-<part name="X4" library="con-samtec.local" deviceset="TSW-104-02-S-S" device=""/>
-<part name="X5" library="con-samtec.local" deviceset="TSW-104-02-S-S" device=""/>
+<part name="X1" library="mylib" deviceset="S4B-XH-A" device=""/>
+<part name="X2" library="mylib" deviceset="S4B-XH-A" device=""/>
+<part name="X3" library="mylib" deviceset="S4B-XH-A" device=""/>
+<part name="X4" library="mylib" deviceset="S4B-XH-A" device=""/>
+<part name="X5" library="mylib" deviceset="S4B-XH-A" device=""/>
 <part name="P+2" library="mylib" deviceset="VCC" device=""/>
 <part name="P+3" library="mylib" deviceset="VCC" device=""/>
 <part name="P+4" library="mylib" deviceset="VCC" device=""/>
