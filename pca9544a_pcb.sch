@@ -1082,6 +1082,104 @@ chip</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="con-samtec.local">
+<description>&lt;b&gt;Samtec Connectors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="TSW-102-02-S-S-RA">
+<description>&lt;b&gt;THROUGH-HOLE .025inch SQ POST HEADER&lt;/b&gt;&lt;p&gt;
+Source: Samtec TSW.pdf</description>
+<wire x1="-2.669" y1="-2.046" x2="2.669" y2="-2.046" width="0.2032" layer="21"/>
+<wire x1="2.669" y1="-2.046" x2="2.669" y2="-0.106" width="0.2032" layer="21"/>
+<wire x1="2.669" y1="-0.106" x2="-2.669" y2="-0.106" width="0.2032" layer="21"/>
+<wire x1="-2.669" y1="-0.106" x2="-2.669" y2="-2.046" width="0.2032" layer="21"/>
+<pad name="1" x="1.27" y="1.524" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
+<pad name="2" x="-1.27" y="1.524" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
+<text x="-3.1" y="-7.6" size="1" layer="25" ratio="20" rot="R90">&gt;NAME</text>
+<text x="4.4" y="-7" size="1" layer="27" ratio="20" rot="R90">&gt;VALUE</text>
+<rectangle x1="-1.524" y1="0" x2="-1.016" y2="1.778" layer="51"/>
+<rectangle x1="1.016" y1="0" x2="1.524" y2="1.778" layer="51"/>
+<rectangle x1="-1.524" y1="-7.89" x2="-1.016" y2="-2.04" layer="51"/>
+<rectangle x1="1.016" y1="-7.89" x2="1.524" y2="-2.04" layer="51"/>
+<polygon width="0.2" layer="21">
+<vertex x="2" y="-0.1"/>
+<vertex x="2.7" y="-0.1"/>
+<vertex x="2.7" y="-0.8"/>
+</polygon>
+</package>
+<package name="TSW-102-02-S-S">
+<description>&lt;b&gt;THROUGH-HOLE .025inch SQ POST HEADER&lt;/b&gt;&lt;p&gt;
+Source: Samtec TSW.pdf</description>
+<wire x1="-2.6" y1="1.1" x2="2.6" y2="1.1" width="0.2" layer="21"/>
+<wire x1="2.6" y1="1.1" x2="2.6" y2="-1.1" width="0.2" layer="21"/>
+<wire x1="2.6" y1="-1.1" x2="-2.6" y2="-1.1" width="0.2" layer="21"/>
+<wire x1="-2.6" y1="-1.1" x2="-2.6" y2="1.1" width="0.2" layer="21"/>
+<pad name="1" x="1.27" y="0" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
+<pad name="2" x="-1.27" y="0" drill="1" diameter="1.5" shape="octagon" rot="R180"/>
+<text x="0" y="0" size="1" layer="25" font="vector" ratio="20" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1" layer="27" font="vector" align="center">&gt;VALUE</text>
+<rectangle x1="-1.62" y1="-0.35" x2="-0.92" y2="0.35" layer="51"/>
+<rectangle x1="0.92" y1="-0.35" x2="1.62" y2="0.35" layer="51"/>
+<polygon width="0.2" layer="21">
+<vertex x="2.6" y="0.5"/>
+<vertex x="2" y="1.1"/>
+<vertex x="2.6" y="1.1"/>
+</polygon>
+<wire x1="-2.6" y1="1.1" x2="2.6" y2="1.1" width="0.2" layer="51"/>
+<wire x1="2.6" y1="1.1" x2="2.6" y2="-1.1" width="0.2" layer="51"/>
+<wire x1="2.6" y1="-1.1" x2="-2.6" y2="-1.1" width="0.2" layer="51"/>
+<wire x1="-2.6" y1="1.1" x2="-2.6" y2="-1.1" width="0.2" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MPINV">
+<text x="-1.27" y="1.27" size="1.778" layer="96">&gt;VALUE</text>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<rectangle x1="0" y1="-0.254" x2="1.778" y2="0.254" layer="94"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+<symbol name="MPIN">
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<rectangle x1="0" y1="-0.254" x2="1.778" y2="0.254" layer="94"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TSW-102-02-S-S" prefix="X">
+<description>&lt;b&gt;THROUGH-HOLE POST HEADER&lt;/b&gt;&lt;p&gt;
+Source: Samtec TSW.pdf</description>
+<gates>
+<gate name="-1" symbol="MPINV" x="0" y="0" addlevel="always"/>
+<gate name="-2" symbol="MPIN" x="0" y="-2.54" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="TSW-102-02-S-S">
+<connects>
+<connect gate="-1" pin="1" pad="1"/>
+<connect gate="-2" pin="1" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AKIZUKI" value="C-08593" constant="no"/>
+<attribute name="DIGIKEY" value="S1011EC-02-ND" constant="no"/>
+<attribute name="SEEED" value="320020016" constant="no"/>
+<attribute name="TH_PAD" value="2"/>
+</technology>
+</technologies>
+</device>
+<device name="-RA" package="TSW-102-02-S-S-RA">
+<connects>
+<connect gate="-1" pin="1" pad="1"/>
+<connect gate="-2" pin="1" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1147,6 +1245,14 @@ chip</description>
 <part name="P2" library="mylib" deviceset="PCB-CORNER" device=""/>
 <part name="P3" library="mylib" deviceset="PCB-CORNER" device=""/>
 <part name="P4" library="mylib" deviceset="PCB-CORNER" device=""/>
+<part name="X6" library="con-samtec.local" deviceset="TSW-102-02-S-S" device="-RA"/>
+<part name="X7" library="con-samtec.local" deviceset="TSW-102-02-S-S" device="-RA"/>
+<part name="X8" library="con-samtec.local" deviceset="TSW-102-02-S-S" device="-RA"/>
+<part name="X9" library="con-samtec.local" deviceset="TSW-102-02-S-S" device="-RA"/>
+<part name="P+13" library="mylib" deviceset="VCC" device=""/>
+<part name="P+14" library="mylib" deviceset="VCC" device=""/>
+<part name="P+15" library="mylib" deviceset="VCC" device=""/>
+<part name="P+16" library="mylib" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1239,6 +1345,18 @@ slave bus SDA/SCL pulled up to each slave bus VDD</text>
 <instance part="P2" gate="G$1" x="152.4" y="17.78" rot="R90"/>
 <instance part="P3" gate="G$1" x="144.78" y="17.78" rot="R180"/>
 <instance part="P4" gate="G$1" x="144.78" y="12.7" rot="R270"/>
+<instance part="X6" gate="-1" x="139.7" y="129.54" rot="R90"/>
+<instance part="X6" gate="-2" x="139.7" y="165.1" rot="R270"/>
+<instance part="X7" gate="-1" x="147.32" y="129.54" rot="R90"/>
+<instance part="X7" gate="-2" x="147.32" y="165.1" rot="R270"/>
+<instance part="P+13" gate="VCC" x="139.7" y="170.18"/>
+<instance part="P+14" gate="VCC" x="147.32" y="170.18"/>
+<instance part="P+15" gate="VCC" x="154.94" y="170.18"/>
+<instance part="P+16" gate="VCC" x="162.56" y="170.18"/>
+<instance part="X8" gate="-2" x="154.94" y="129.54" rot="R90"/>
+<instance part="X8" gate="-1" x="154.94" y="165.1" rot="R270"/>
+<instance part="X9" gate="-2" x="162.56" y="129.54" rot="R90"/>
+<instance part="X9" gate="-1" x="162.56" y="165.1" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1556,6 +1674,22 @@ slave bus SDA/SCL pulled up to each slave bus VDD</text>
 <wire x1="127" y1="121.92" x2="127" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="X6" gate="-2" pin="1"/>
+<pinref part="P+13" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="X7" gate="-2" pin="1"/>
+<pinref part="P+14" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="P+15" gate="VCC" pin="VCC"/>
+<pinref part="X8" gate="-1" pin="1"/>
+</segment>
+<segment>
+<pinref part="P+16" gate="VCC" pin="VCC"/>
+<pinref part="X9" gate="-1" pin="1"/>
+</segment>
 </net>
 <net name="N$19" class="0">
 <segment>
@@ -1565,8 +1699,13 @@ slave bus SDA/SCL pulled up to each slave bus VDD</text>
 <wire x1="144.78" y1="121.92" x2="144.78" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="121.92" x2="144.78" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-1" pin="1"/>
-<wire x1="142.24" y1="127" x2="142.24" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="127" x2="142.24" y2="124.46" width="0.1524" layer="91"/>
 <junction x="142.24" y="121.92"/>
+<wire x1="142.24" y1="124.46" x2="142.24" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="124.46" x2="139.7" y2="124.46" width="0.1524" layer="91"/>
+<junction x="142.24" y="124.46"/>
+<pinref part="X6" gate="-1" pin="1"/>
+<wire x1="139.7" y1="124.46" x2="139.7" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -1577,8 +1716,13 @@ slave bus SDA/SCL pulled up to each slave bus VDD</text>
 <wire x1="152.4" y1="121.92" x2="152.4" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="121.92" x2="152.4" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="X3" gate="-1" pin="1"/>
-<wire x1="149.86" y1="121.92" x2="149.86" y2="127" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="121.92" x2="149.86" y2="124.46" width="0.1524" layer="91"/>
 <junction x="149.86" y="121.92"/>
+<wire x1="149.86" y1="124.46" x2="149.86" y2="127" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="124.46" x2="147.32" y2="124.46" width="0.1524" layer="91"/>
+<junction x="149.86" y="124.46"/>
+<pinref part="X7" gate="-1" pin="1"/>
+<wire x1="147.32" y1="124.46" x2="147.32" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -1589,8 +1733,13 @@ slave bus SDA/SCL pulled up to each slave bus VDD</text>
 <wire x1="160.02" y1="121.92" x2="160.02" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="121.92" x2="160.02" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="X4" gate="-1" pin="1"/>
-<wire x1="157.48" y1="127" x2="157.48" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="127" x2="157.48" y2="124.46" width="0.1524" layer="91"/>
 <junction x="157.48" y="121.92"/>
+<wire x1="157.48" y1="124.46" x2="157.48" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="124.46" x2="154.94" y2="124.46" width="0.1524" layer="91"/>
+<junction x="157.48" y="124.46"/>
+<wire x1="154.94" y1="124.46" x2="154.94" y2="127" width="0.1524" layer="91"/>
+<pinref part="X8" gate="-2" pin="1"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -1601,8 +1750,13 @@ slave bus SDA/SCL pulled up to each slave bus VDD</text>
 <wire x1="167.64" y1="121.92" x2="167.64" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="121.92" x2="167.64" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="X5" gate="-1" pin="1"/>
-<wire x1="165.1" y1="121.92" x2="165.1" y2="127" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="121.92" x2="165.1" y2="124.46" width="0.1524" layer="91"/>
 <junction x="165.1" y="121.92"/>
+<wire x1="165.1" y1="124.46" x2="165.1" y2="127" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="124.46" x2="162.56" y2="124.46" width="0.1524" layer="91"/>
+<junction x="165.1" y="124.46"/>
+<wire x1="162.56" y1="124.46" x2="162.56" y2="127" width="0.1524" layer="91"/>
+<pinref part="X9" gate="-2" pin="1"/>
 </segment>
 </net>
 </nets>
