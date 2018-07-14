@@ -1191,7 +1191,7 @@ Source: Samtec TSW.pdf</description>
 </classes>
 <parts>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
-<part name="GIT1" library="git-revision" deviceset="GIT-REVISION" device="_1.2" value="b5c31e5"/>
+<part name="GIT1" library="git-revision" deviceset="GIT-REVISION" device="_1.2" value="dcc5f2d"/>
 <part name="IC1" library="mylib" deviceset="PCA9544A" device="BS"/>
 <part name="R1" library="mylib" deviceset="R-US-*" device="-1608" technology="10K"/>
 <part name="R2" library="mylib" deviceset="R-US-*" device="-1608" technology="10K"/>
