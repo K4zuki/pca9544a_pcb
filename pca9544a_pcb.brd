@@ -602,7 +602,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="GIT1" library="git-revision" package="GIT-REVISION_1.2" value="dcc5f2d" x="32" y="37">
+<element name="GIT1" library="git-revision" package="GIT-REVISION_1.2" value="4eef362" x="32" y="37">
 <attribute name="NOT_COMPONENT" value="YES" x="32" y="37" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IC1" library="mylib" package="QFN20-0.65P5.0X5.0" value="PCA9544ABS" x="21.5" y="21.5" smashed="yes">
